@@ -22,6 +22,10 @@
   call dein#add('Shougo/vimshell')
   
   call dein#add('derekwyatt/vim-scala')
+  call dein#add('pangloss/vim-javascript')
+  call dein#add('posva/vim-vue')
+  call dein#add('digitaltoad/vim-pug')
+  call dein#add('mxw/vim-jsx')
   call dein#add('leafgarland/typescript-vim')
   call dein#add('kchmck/vim-coffee-script')
   
@@ -35,6 +39,7 @@
   call dein#add('airblade/vim-gitgutter')
   call dein#add('kien/rainbow_parentheses.vim')
   
+  call dein#add('ctrlpvim/ctrlp.vim')
   call dein#add('mattn/emmet-vim')
 
   call dein#end()
@@ -193,7 +198,7 @@
   " Vim 起動時 vim-indent-guides を自動起動
   let g:indent_guides_enable_on_vim_startup=1
   " ガイドをスタートするインデントの量
-  let g:indent_guides_start_level=1
+  let g:indent_guides_start_level=6
   " 自動カラー無効
   let g:indent_guides_auto_colors=0
   colorscheme default
@@ -234,6 +239,9 @@
   autocmd BufWritePost *.coffee silent make! --output ~/.vim/coffee-script-vim/compiled
   autocmd QuickFixCmdPost * nested cwindow | redraw!
   
+"}}}
+"ctrlpの設定"{{{
+  let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 "}}}
 "emmet-vimの設定"{{{
 "}}}
