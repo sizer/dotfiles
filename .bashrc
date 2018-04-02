@@ -1,6 +1,11 @@
 #!/bin/bash
 alias ll='ls -la'
 
+# ghq
+alias g='cd $(ghq root)/$(ghq list | peco)'
+alias gh='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
+alias hcurl='curl -D - -s -o /dev/null'
+
 # display git branch name
 source ~/dotfiles/git/git-prompt.sh
 source ~/dotfiles/git/git-completion.bash
