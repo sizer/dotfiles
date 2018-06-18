@@ -1,6 +1,11 @@
 #!/bin/bash
 alias ll='ls -la'
 
+# rails
+alias b="bundle"
+alias be="bundle exec"
+alias ber="bundle exec rails"
+
 # ghq
 alias g='cd $(ghq root)/$(ghq list | peco)'
 alias gh='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
