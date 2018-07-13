@@ -1,6 +1,14 @@
 #!/bin/bash
 alias ll='ls -la'
 
+# docker
+alias dstop="docker stop $@"
+alias dps="docker ps"
+alias dpsq="docker ps -q"
+alias dsync="docker-sync start"
+alias dupd="docker-compose up -d"
+alias dexe="docker exec -it $@"
+
 # rails
 alias b="bundle"
 alias be="bundle exec"
