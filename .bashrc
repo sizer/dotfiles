@@ -1,5 +1,8 @@
 #!/bin/bash
-alias ll='ls -la'
+
+# daily
+alias ll='ls -AGl'
+alias his='history'
 
 # docker
 alias dstop="docker stop $@"
