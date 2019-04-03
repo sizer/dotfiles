@@ -1,0 +1,20 @@
+[user]
+	email = shinse.tanaka@gmail.com
+	name = sizer
+[push]
+	default = simple
+[core]
+	editor = vim
+	excludesfile = 
+[color]
+	ui = auto
+[alias]
+	co = checkout
+	st = status
+	br = branch
+	his = log --oneline --decorate --graph --branches --tags --remotes
+
+[ghq]
+	root = /Users/shinse/go/src
+[fetch]
+	prune = true
