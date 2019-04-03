@@ -15,6 +15,6 @@
 	his = log --oneline --decorate --graph --branches --tags --remotes
 
 [ghq]
-	root = /Users/shinse/go/src
+	root = ~/go/src
 [fetch]
 	prune = true
