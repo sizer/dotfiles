@@ -33,4 +33,4 @@ export PS1='\[\033[32m\]\u@\h\[\033[00m\]:\[\033[34m\]\w\[\033[31m\]$(__git_ps1)
 HISTSIZE=500
 HISTFILESIZE=5000
 HISTCONTROL=ignoreboth
-HISTIGNORE=?:history:exit
+HISTIGNORE=?:history:his:exit
