@@ -2,7 +2,7 @@
 
 # daily
 alias ll='ls -AGl'
-alias his='history'
+alias his='history | peco'
 
 # docker
 alias dstop="docker stop $@"

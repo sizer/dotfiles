@@ -13,6 +13,7 @@
 	st = status
 	br = branch
 	his = log --oneline --decorate --graph --branches --tags --remotes
+  hisd = log --oneline --decorate --graph --branches --tags --remotes --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n'
 
 [ghq]
 	root = ~/go/src
