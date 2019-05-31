@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # daily
-alias ll='ls -AGl'
+alias ll='ls -AGlh'
 alias his='history | peco'
 
 # docker
@@ -34,3 +34,7 @@ HISTSIZE=500
 HISTFILESIZE=5000
 HISTCONTROL=ignoreboth
 HISTIGNORE=?:history:his:exit
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/sizer/.sdkman"
+[[ -s "/home/sizer/.sdkman/bin/sdkman-init.sh" ]] && source "/home/sizer/.sdkman/bin/sdkman-init.sh"
