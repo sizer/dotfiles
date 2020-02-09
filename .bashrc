@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # daily
-alias ll='ls -AGlh'
+alias ls='ls --color=auto'
+alias ll='ls -AGlh --color=auto'
 alias his='history | peco'
 
 # docker
