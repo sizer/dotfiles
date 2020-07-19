@@ -22,6 +22,7 @@ alias ber="bundle exec rails"
 alias g='cd $(ghq root)/$(ghq list | peco)'
 alias gh='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
 alias hcurl='curl -D - -s -o /dev/null'
+export GHQ_ROOT=~/.ghq
 
 # display git branch name
 source ~/dotfiles/git/git-prompt.sh
