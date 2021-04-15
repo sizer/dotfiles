@@ -9,7 +9,7 @@ alias dstop="docker stop $@"
 alias dps="docker ps"
 alias dpsq="docker ps -q"
 alias dsync="docker-sync start"
-alias dupd="docker-compose up -d"
+alias dupd="docker compose up -d"
 alias dexe="docker exec -it $@"
 
 # rails
