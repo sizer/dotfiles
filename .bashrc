@@ -23,6 +23,9 @@ alias gh='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
 alias hcurl='curl -D - -s -o /dev/null'
 export GHQ_ROOT=~/.ghq
 
+# Ansible
+export ANSIBLE_VAULT_PASSWORD_FILE=~/.ansible_vault_pass
+
 # display git branch name
 source ~/dotfiles/git/git-prompt.sh
 source ~/dotfiles/git/git-completion.bash
