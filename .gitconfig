@@ -14,7 +14,10 @@
 	br = branch
 	his = log --oneline --decorate --graph --branches --tags --remotes
   hisd = log --oneline --decorate --graph --branches --tags --remotes --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n'
-
+  merged-branch = !sh -c 'git fetch --prune | git branch -vv | grep \"origin/.*: gone]\" | awk \"{print \\$1}\"'
+  brm = merged-branch
+  delete-merged-branch = !sh -c 'git merged-branch | xargs git branch -D'
+  brmd = delete-merged-branch
 [ghq]
 	root = ~/go/src
 [fetch]
