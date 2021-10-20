@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # daily
-alias ll='ls -AGl'
+alias ls='ls --color=auto'
+alias ll='ls -AGlh --color=auto'
 alias his='history | peco'
 
 # docker
@@ -34,7 +35,11 @@ GIT_PS1_SHOWUPSTREAM=true
 export PS1='\[\033[32m\]\u@\h\[\033[00m\]:\[\033[34m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]\n\$ '
 
 # history
-HISTSIZE=500
+HISTSIZE=5000
 HISTFILESIZE=5000
 HISTCONTROL=ignoreboth
 HISTIGNORE=?:history:his:exit
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/sizer/.sdkman"
+[[ -s "/home/sizer/.sdkman/bin/sdkman-init.sh" ]] && source "/home/sizer/.sdkman/bin/sdkman-init.sh"
