@@ -18,6 +18,9 @@ alias b="bundle"
 alias be="bundle exec"
 alias ber="bundle exec rails"
 
+# gcloud
+alias gcpq="gcloud config configurations list | tail -n +2 | peco | awk '{print \$1}' | xargs gcloud config configurations activate"
+
 # ghq
 alias g='cd $(ghq root)/$(ghq list | peco)'
 alias gh='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
