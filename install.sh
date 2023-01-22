@@ -6,7 +6,14 @@ INSTALL_SH_PATH="$(realpath install.sh)"
 if [ "$INSTALL_SH_PATH" != "$HOME/dotfiles/install.sh" ]; then
     echo "ERROR: Place dotfiles/install.sh on your home as $HOME/dotfiles/install.sh"
     echo "Current path: $INSTALL_SH_PATH"
-    # exit 1
+    exit 1
+fi
+
+# Validate if caller is $HOME/dotfiles
+if [ "$(pwd)" != "$HOME/dotfiles" ]; then
+    echo "ERROR: Run dotfiles/install.sh in $HOME/dotfiles"
+    echo "Current path: $(pwd)"
+    exit 1
 fi
 
 for DOTFILE in .??*
