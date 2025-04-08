@@ -1,5 +1,11 @@
 # Zsh shell config
 
+# Completion
+fpath=(~/dotfiles/git/zsh/completion $fpath)
+autoload -Uz compinit
+compinit
+
+
 #########
 # Alias #
 #########
@@ -8,17 +14,18 @@
 #########################
 # Environment Variables #
 #########################
+
 # display git branch name
-source ~/dotfiles/git/git-prompt.sh
-source ~/dotfiles/git/git-completion.zsh
-GIT_PS1_SHOWDIRTYSTATE=true
-GIT_PS1_SHOWUPSTREAM=true
-# export PS1='\[\033[32m\]\u@\h\[\033[00m\]:\[\033[34m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]\n\$ '
 autoload -Uz vcs_info
 precmd() { vcs_info }
 setopt prompt_subst
-# export PS1='%F{green}%n@%m%f:%F{blue}%~%f$(__git_ps1 "%F{red} (%s)%f")\n\$ '
-export PS1='%F{green}%n@%m%f:%F{blue}%-%f%F{red}${vcs_info_msg_0_}%f%n
+zstyle ':vcs_info:git:*' formats '(%b) %u'
+zstyle ':vcs_info:git:*' actionformats '(%b|%a%u) %u'
+zstyle ':vcs_info:git:*' check-for-changes true
+zstyle ':vcs_info:git:*' unstagedstr '*'
+zstyle ':vcs_info:git:*' stagedstr '+'
+zstyle ':vcs_info:git:*' cleanstr '='
+export PS1='%F{green}%n@%m%f:%F{blue}%~%f%F{red} ${vcs_info_msg_0_}%f
 $ '
 
 # history
